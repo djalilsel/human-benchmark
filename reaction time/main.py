@@ -1,9 +1,7 @@
 import pyautogui
     
 while True:
-        img = pyautogui.screenshot(region=(0, 200, 10, 10))
-        colors = img.getcolors()[0][1]
-        if colors == (75, 219, 106):
-            pyautogui.click()
+         if pyautogui.pixelMatchesColor(10, 201, (75, 219, 106)):                            
+            pyautogui.click(10, 201)
 
 
