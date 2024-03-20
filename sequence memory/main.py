@@ -4,8 +4,13 @@ import time
     
 record = 's'
 pos = []
-i = 1
 length = len(pos)
+i = 1
+
+def click():
+    while len(pos) > 0:
+        pyautogui.click(pos[0])
+        pos.remove(pos[0])
 
 def check(x, y):
  if pyautogui.pixelMatchesColor(x, y, (255, 255, 255)):
@@ -13,11 +18,6 @@ def check(x, y):
         pos.append((x, y))
     elif pos[len(pos) - 1] != (x, y):
         pos.append((x, y))
-
-def click():
-    while len(pos) > 0:
-        pyautogui.click(pos[0])
-        pos.remove(pos[0])
    
 while True:
     if keyboard.is_pressed('r'):
@@ -29,14 +29,11 @@ while True:
         i = i + 1
         click()
         record = 'r'
-    if keyboard.is_pressed('s'):
-        record = 's'
     if record == 'r':
         print(len(pos), length)
         if(len(pos) > length):
             time.sleep(0.5)
             record = 'l'
-            
         check(821, 334)
         check(960, 334)
         check(1087, 330)
