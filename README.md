@@ -11,7 +11,7 @@ This repository contains a the Python script I used to automatically solves the 
 
 Here are the results of the challenges solved by the script:
 
-`![Human Benchmark Results](images/results.png)`
+![Human Benchmark Results](images/results.png)
 
 ## Contributing
 
